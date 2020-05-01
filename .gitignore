@@ -8,6 +8,9 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 
+# Build directories
+dist/
+
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
