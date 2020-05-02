@@ -1,9 +1,9 @@
 import Todo from './../models/todo.model'
 
 function list(req, res) {
-  const { limit = 50, skip = 0 } = req.query
+  const { limit = 50, skip = 0, uid } = req.query
 
-  Todo.list({ limit, skip }).then(todos => res.json(todos)).catch(e => next(e))
+  Todo.list({ limit, skip, uid }).then(todos => res.json(todos)).catch(e => next(e))
 }
 
 function remove(req, res) {
