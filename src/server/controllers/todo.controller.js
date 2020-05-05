@@ -7,7 +7,7 @@ function list(req, res) {
 }
 
 function remove(req, res) {
-  Todo.deleteOne({ _id: req.params.id }, err => {
+  Todo.findByIdAndRemove({ _id: req.params.id }, err => {
     if (err) {
       res.send(err)
     } else {
